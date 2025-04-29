@@ -25,4 +25,5 @@ services:
       - "5050:80"
 
 volumes:
-  pg_data: #ensures that data is saved even if the container is removed
+  pg_data: #ensures that data is saved even if the container is removed make sure to edit the new volume name
+  
