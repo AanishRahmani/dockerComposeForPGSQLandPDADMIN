@@ -3,7 +3,7 @@ version: "3.8"
 services:
   postgres:
     image: postgres:latest
-    container_name: my_postgres
+    container_name: my_postgres # change container name for clarification
     restart: always
     environment:
       POSTGRES_USER: admin
@@ -12,11 +12,11 @@ services:
     ports:
       - "5432:5432"
     volumes: #used for persisting data
-      - pg_data:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data # edit the pg_data otherwise the data from previous container will show
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: my_pgadmin
+    container_name: my_pgadmin # change container name for clarification
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
